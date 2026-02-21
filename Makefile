@@ -2,11 +2,11 @@ all: build test
 
 preview:
 	bundle exec jekyll clean
-	bundle exec jekyll serve --future --drafts --unpublished --incremental
+	bundle exec jekyll serve --future --drafts --unpublished --incremental --strict_front_matter
 
 build:
 	bundle exec jekyll clean
-	bundle exec jekyll build --future --drafts --unpublished
+	bundle exec jekyll build --future --drafts --unpublished --strict_front_matter
 
 test: test-fast test-slow
 
@@ -19,3 +19,5 @@ test-slow:
 test-fast:
 	## Check for broken Markdown reference-style links that are displayed in text unchanged, e.g. [broken][broken link]
 	! find _site/ -name '*.html' | xargs grep ']\[' | grep -v skip-test | grep .
+	## Ensure that no template strings leak through liquid rendering
+	! find _site/ -name '*.html' | xargs grep '\$$(.*)'

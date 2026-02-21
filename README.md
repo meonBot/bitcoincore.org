@@ -1,4 +1,4 @@
-# [bitcoincore.org](https://bitcoincore.org) [![Build Status](https://travis-ci.org/bitcoin-core/bitcoincore.org.svg?branch=master)](https://travis-ci.org/bitcoin-core/bitcoincore.org)
+# [bitcoincore.org](https://bitcoincore.org)
 
 This repository is the source code of the Bitcoin Core project website built with Jekyll.
 
@@ -20,7 +20,7 @@ The following `Front Matter` is required for the multilingual setup in all files
 
   - `name:`      group name for unique article. Each translation must share the same group name, e.g. `october15-report`
   - `id:`        each article translation must have a unique ID. Use the language code + `-name` field. e.g. `en-october15-report`
-  - `permalink:` the must include the language code, end a trailing slash, e.g. `/en/2015/12/31/report/`.
+  - `permalink:` must include the language code and end with a trailing slash, e.g. `/en/2015/12/31/report/`.
   - `title:`     the translated title of the article
   - `type:`      the content type (`pages`, `posts`, `releases`, `meetings`, etc.)
   - `layout:`    the layout template (`page`, `post`, etc.)
@@ -41,8 +41,9 @@ permalink: /en/2016/01/01/short-title
 ## Building
 
 This website is based on [Jekyll](https://jekyllrb.com/).  To build
-locally, [install Ruby 2.5.5](https://gorails.com/setup) using system
-packages, [rvm](https://rvm.io), [rbenv](https://github.com/rbenv/rbenv), or another method.
+locally, [install Ruby 3.1.2](https://gorails.com/setup) using system
+packages, [rvm](https://rvm.io), [rbenv](https://github.com/rbenv/rbenv), or another method. An
+alternative is to use Docker, for which instructions are available [here](./contrib/devtools/).
 Then clone this repository and change directory into it:
 
     git clone https://github.com/bitcoin-core/bitcoincore.org.git
@@ -73,7 +74,7 @@ pages dated in the future (such as prepared release announcements).
 To test the site:
 
     bundle exec jekyll build --future --drafts --unpublished
-    bundle exec htmlproofer --disable-external --url-ignore '/^\/bin/.*/' ./_site
+    bundle exec htmlproofer --check-html --disable-external --url-ignore '/^\/bin/.*/' ./_site
 
 The additional parameters to `jekyll build` ensure that all possible
 pages are built and checked.

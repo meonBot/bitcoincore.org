@@ -5,10 +5,14 @@ permalink: /ja/list/announcements/join/
 type: pages
 layout: page
 lang: ja
-version: 0
+version: 3
 ---
 Bitcoin Coreの重要なセキュリティのお知らせとリリースの通知を受け取ります。
 
+以下のRSSフィードを購読するか、[Bitcoin Coreブログ][bitcoin core blog]セクションをチェックしてください。
+
+お知らせリストは現在利用できません。
+
 {% include pages/list/announcement.html %}
-    
-お知らせのみなので送信されるメールの量はわずかです。
+
+[bitcoin core blog]: /ja/blog/

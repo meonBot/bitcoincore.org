@@ -20,6 +20,7 @@ import (
 )
 
 const BITCOIN_COMMAND = "bitcoin-cli"
+const BITCOIN_CHAINOPTION = "-regtest"
 
 type Command struct {
 	Name        string
@@ -50,7 +51,7 @@ func getVersion() string {
 	m := f.(map[string]interface{})
 
 	numv := int(m["version"].(float64))
-	v := fmt.Sprintf("%d.%d.%d", numv/1000000, (numv/10000)%100, (numv/100)%100)
+	v := fmt.Sprintf("%d.%d.%d", (numv/10000)%100, (numv/100)%100, numv%100)
 	return v
 }
 
@@ -158,9 +159,10 @@ func open(path string) io.Writer {
 }
 
 func run(args ...string) string {
+	args = append([]string{BITCOIN_CHAINOPTION}, args...)
 	out, err := exec.Command(BITCOIN_COMMAND, args...).CombinedOutput()
 	if err != nil {
-		log.Fatalf("Cannot run bitcoin-cli: %s, is bitcoind running?", err.Error())
+		log.Fatalf("Cannot run bitcoin-cli: %s, is bitcoind (regtest) running?", err.Error())
 	}
 
 	return string(out)
