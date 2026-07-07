@@ -230,3 +230,51 @@ es:
       twitter_impersonation:
         title: "X impersonation"  # XXX
         url: "/en/twitter-impersonation"  # XXX
+pt_BR:
+  home:
+    title: "Bitcoin Core"
+    url:   "/pt_BR/"
+  about:
+    title: "Sobre"
+    url:   "/pt_BR/about/"
+  download:
+    title: "Download"  # XXX
+    url: "/en/download"  # XXX
+  blog:
+    title: "Blog"  # XXX
+    url:   "/en/blog/"  # XXX
+  releases:
+    title: "Versões"  # XXX
+    url:   "/en/releases/"  # XXX
+  security-advisories:
+    title: "Security Advisories"
+    url:   "/en/security-advisories/"
+  dev:
+    title: "Desenvolvimento"  # XXX
+    submenu: true
+    tree:
+      contribute:
+        title: "contribuir"  # XXX
+        url:   "/en/contribute/"  # XXX
+      contribute-code:
+        title: "contributing code"  # XXX
+        url:   "/en/faq/contributing-code/"  # XXX
+      meetings:
+        title: "reuniões"  # XXX
+        url:   "/en/meetings/"  # XXX
+      eol:
+        title: "Lifecycle"  # XXX
+        url:   "/en/lifecycle"  # XXX
+  contact:
+    title: "Contato"  # XXX
+    submenu: true
+    tree:
+      contact_us:
+        title: "Contact Us"  # XXX
+        url: "/en/contact/"  # XXX
+      announcements:
+        title: "Announcements"  # XXX
+        url: "/en/list/announcements/join/"  # XXX
+      twitter_impersonation:
+        title: "X impersonation"  # XXX
+        url: "/en/twitter-impersonation"  # XXX
