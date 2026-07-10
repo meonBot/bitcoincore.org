@@ -36,7 +36,7 @@ require 'yaml'
 
       ## Other monotree repos; for repo "bitcoin-core/foo", PR format is "foo#123".
       ## Must start at word boundary
-      output.gsub!(/\b([a-z]+)#([0-9]+)/){ |s|
+      output.gsub!(/\b([a-z\-]+)#([0-9]+)/){ |s|
         '<a href="https://github.com/bitcoin-core/' + $1 + '/pull/' + $2 + '">' + s + '</a>'
       }
 
