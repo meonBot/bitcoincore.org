@@ -257,7 +257,7 @@ pt_BR:
         title: "contribuir"  # XXX
         url:   "/en/contribute/"  # XXX
       contribute-code:
-        title: "contributing code"  # XXX
+        title: "contribuir com código"  # XXX
         url:   "/en/faq/contributing-code/"  # XXX
       meetings:
         title: "reuniões"  # XXX
