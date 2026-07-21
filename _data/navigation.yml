@@ -247,8 +247,8 @@ pt_BR:
     title: "Versões"  # XXX
     url:   "/en/releases/"  # XXX
   security-advisories:
-    title: "Security Advisories"
-    url:   "/en/security-advisories/"
+    title: "Avisos de segurança"  # XXX
+    url:   "/en/security-advisories/"  # XXX
   dev:
     title: "Desenvolvimento"  # XXX
     submenu: true
@@ -263,18 +263,18 @@ pt_BR:
         title: "reuniões"  # XXX
         url:   "/en/meetings/"  # XXX
       eol:
-        title: "Lifecycle"  # XXX
+        title: "Ciclo de vida"  # XXX
         url:   "/en/lifecycle"  # XXX
   contact:
     title: "Contato"  # XXX
     submenu: true
     tree:
       contact_us:
-        title: "Contact Us"  # XXX
+        title: "Fale conosco"  # XXX
         url: "/en/contact/"  # XXX
       announcements:
-        title: "Announcements"  # XXX
+        title: "Comunicados"  # XXX
         url: "/en/list/announcements/join/"  # XXX
       twitter_impersonation:
-        title: "X impersonation"  # XXX
+        title: "Perfis falsos no X"  # XXX
         url: "/en/twitter-impersonation"  # XXX
